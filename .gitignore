@@ -20,5 +20,5 @@
 
 # Ignore .env files as they are personal
 /.env
-/composer.json
-/composer.lock
+/.editorconfig
+/.gitattributes
