@@ -3,10 +3,32 @@
  * Implemnts hook_helps()
  */
 function curso_module_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
-    switch ($route_name) {
-  
-      // Main module help for the block module.
-      case 'help.page.curso_module':
-        return '<p>Este é o hook_help de nosso módulo do curso</p>';
-    }
+  switch ($route_name) {
+
+    // Main module help for the block module.
+    case 'help.page.curso_module':
+      return '<p>Este é o hook_help de nosso módulo do curso</p>';
   }
+}
+
+/**
+ * Implemets /**
+  * Implements hook_ENTITY_TYPE_update().
+  *
+  * @param Drupal\node\NodeInterface $node
+  */
+ function curso_module_node_update(Drupal\node\NodeInterface $node) {
+  dpm('Drupal chama um outro hook_ENTITY_TYPE_update');
+ }
+
+
+/**
+ * Implemets /**
+  * Implements hook_ENTITY_TYPE_insert().
+  *
+  * @param Drupal\node\NodeInterface $node
+  */
+  function curso_module_node_insert(Drupal\node\NodeInterface $node) {
+   dpm('Drupal chama um outro hook_ENTITY_TYPE_insert');
+  }
+ 
