@@ -9,6 +9,8 @@ class CursoController extends ControllerBase
 {
     public function home()
     {
-        return new Response('Esta é a resposta do controlador');
+        return [
+            '#markup' => 'É o markup do nosso controlador'
+            ];
     }
 }
