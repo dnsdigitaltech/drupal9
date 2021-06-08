@@ -3,14 +3,15 @@
 namespace Drupal\curso_module\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\node\NodeInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 class CursoController extends ControllerBase
 {
-    public function home()
+    public function home($node)
     {
         return [
-            '#markup' => 'É o markup do nosso controlador'
+            '#markup' => 'A Etiqueta do node é: '.$node
             ];
     }
 }

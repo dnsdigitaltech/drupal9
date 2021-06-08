@@ -1,5 +1,5 @@
 curso_module.primeira_rota: 
-  path: 'curso/controller/pagina'
+  path: 'curso/controller/pagina/{node}'
   defaults:
     _controller: '\Drupal\curso_module\Controller\CursoController::home'
   requirements:
