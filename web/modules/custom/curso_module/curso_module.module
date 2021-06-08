@@ -1,0 +1,12 @@
+<?php
+/**
+ * Implemnts hook_helps()
+ */
+function curso_module_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+    switch ($route_name) {
+  
+      // Main module help for the block module.
+      case 'help.page.curso_module':
+        return '<p>Este é o hook_help de nosso módulo do curso</p>';
+    }
+  }
