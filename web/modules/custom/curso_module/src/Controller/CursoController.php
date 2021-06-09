@@ -8,10 +8,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CursoController extends ControllerBase
 {
-    public function home($node)
+    public function home(NodeInterface $node)
     {
         return [
-            '#markup' => 'A Etiqueta do node é: '.$node
-            ];
+            '#theme' => 'curso_plantilla',
+            '#etiqueta' => $node->label(),
+            '#tipo' => $node->bundle(),
+        ];
     }
 }

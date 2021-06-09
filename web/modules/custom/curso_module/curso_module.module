@@ -28,7 +28,22 @@ function curso_module_help($route_name, \Drupal\Core\Routing\RouteMatchInterface
   *
   * @param Drupal\node\NodeInterface $node
   */
-  function curso_module_node_insert(Drupal\node\NodeInterface $node) {
-   dpm('Drupal chama um outro hook_ENTITY_TYPE_insert');
-  }
+function curso_module_node_insert(Drupal\node\NodeInterface $node) {
+  dpm('Drupal chama um outro hook_ENTITY_TYPE_insert');
+}
  
+ /**
+  * Implements hook_theme()
+  *
+  */
+function curso_module_theme($existing, $type, $theme, $path)
+{
+  return [
+    'curso_plantilla' => [
+      'variables' => [
+        'etiqueta' => NULL,
+        'tipo' => NULL,
+      ]
+    ]
+  ];
+}
